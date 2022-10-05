@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 public abstract class TestBaseBeforeMethodAfterMethod {
     protected static WebDriver driver;
     protected static String tarih;
-    @BeforeClass
+    @BeforeClass(groups = {"group1","group2"})
     public static void setUp(){
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
@@ -25,7 +25,7 @@ public abstract class TestBaseBeforeMethodAfterMethod {
 
     }
 
-    @AfterClass
+    @AfterClass(groups = {"group1","group2"})
     public static void tearDown() throws InterruptedException {
         Thread.sleep(5000);
         driver.quit();

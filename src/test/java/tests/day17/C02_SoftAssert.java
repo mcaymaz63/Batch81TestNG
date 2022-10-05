@@ -15,7 +15,7 @@ public class C02_SoftAssert extends TestBaseBeforeMethodAfterMethod {
 //Soft Assert : Kullanabilmek için obje oluştururuz, oluşturduktan sonra obje ismi ile kullanırız, Herhangi bir hata verdiğinde test methodu
 // çalışmaya devam eder, en sonra rapor verir.    baslangıc  SoftAssert objeadı=new SoftAssert();  bitis objeadı.assertAll();
  */
-@Test
+@Test(groups = "group1")
 public void test01() {
     //1-amazon anasayfaya gidin
     driver.get("https://amazon.com");

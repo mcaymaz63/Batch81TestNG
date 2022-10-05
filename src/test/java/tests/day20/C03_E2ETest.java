@@ -48,7 +48,7 @@ public class C03_E2ETest {
         //OK butonuna tıklayın.
          hmcPage.roomReserOk.click();
 
-         //ben
+
 
     }
 }

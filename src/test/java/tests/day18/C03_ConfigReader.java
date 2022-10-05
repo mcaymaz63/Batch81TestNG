@@ -5,7 +5,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C03_ConfigReader {
-    @Test
+    @Test(groups = "group2")
     public void test01() {
         //Amazon sayfasına ve facebook sayfasına gidiniz
         String urlamzn = ConfigReader.getProperty("amznUrl");
