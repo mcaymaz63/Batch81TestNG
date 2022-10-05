@@ -12,10 +12,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
+    private Driver(){
 
- private Driver(){
-
- }
+    }
     static WebDriver driver;
     /*
     Testlerimizi çalıştırdığımızda her seferinde yeni driver oluşturduğu için her test methodu
@@ -26,13 +25,14 @@ public class Driver {
      */
     public static WebDriver getDriver() {
 
-                    if (driver == null) {
-                switch (ConfigReader.getProperty("browser")) {
-                    case "chrome":
-                        WebDriverManager.chromiumdriver().setup();
-                        driver = new ChromeDriver();
-                        break;
-                    case "edge":
+        if (driver == null) {
+            switch (ConfigReader.getProperty("browser")) {
+                case "chrome":
+                    WebDriverManager.chromiumdriver().setup();
+                    driver = new ChromeDriver();
+                    break;
+                case "edge":
+
                         WebDriverManager.edgedriver().setup();
                         driver=new EdgeDriver();
                         break;
